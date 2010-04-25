@@ -1,0 +1,10 @@
+= Overview
+
+Rails 3 out of the box application templates
+
+== Usage :
+
+rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
+
+
+
