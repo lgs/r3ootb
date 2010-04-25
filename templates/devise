@@ -6,13 +6,12 @@ log 'Install devise gem 1.1.pre4'
     end
 
 log 'Collect the gems your application requires'
-    run('bundle install')
+    run 'bundle install' 
 
 log 'Rails generate devise_install'
     run "script/rails g devise_install"
     run "script/rails g devise User"
     run "script/rails g devise_views"
-    run "mv devise app/views"
     run "rake db:create db:migrate"
     run "script/rails g controller home index"
     inject_into_file "config/routes.rb", "\n\n root :to => 'home#index'", :after => "devise_for :users"
