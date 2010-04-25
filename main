@@ -6,10 +6,20 @@ log 'main template'
   #apply 'http://gist.github.com/378517.txt'
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
 
-  #apply 'http://github.com/lgs/rails-templates/raw/master/Blueprint-CSS-layout'
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/blueprint-css'
-
-log 'rm public/index.html'
+log 'Building layout'
   inside('public') do
     run('rm index.html')
   end
+  if yes?("\nCreate a Boks Blueprint CSS ? (y/n)")
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/print.css", "public/stylesheets"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/ie.css", "public/stylesheets"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/grid.png", "public/images"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/"
+
+  else
+    if yes?("\nCreate a generic Blueprint CSS environment ? (y/n)")
+      apply 'http://github.com/lgs/r3ootb/raw/master/templates/blueprint-css'
+    end
+  end
+
