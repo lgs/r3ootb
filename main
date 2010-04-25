@@ -11,11 +11,11 @@ log 'Building layout'
     run('rm index.html')
   end
   if yes?("\nCreate a Boks Blueprint CSS ? (y/n)")
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets"
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/print.css", "public/stylesheets"
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/ie.css", "public/stylesheets"
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/grid.png", "public/images"
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets/screen.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/print.css", "public/stylesheets/print.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/ie.css", "public/stylesheets/ie.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/grid.png", "public/images/grid.png"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/index.html.erb"
 
   else
     if yes?("\nCreate a generic Blueprint CSS environment ? (y/n)")
