@@ -1,6 +1,8 @@
-log 'Running r3ootb application template'
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/rails-3.0.0.beta.3'
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
+
+log 'main template'
+  apply 'http://gist.github.com/378520.txt'
+  apply 'http://gist.github.com/378517.txt'
+  apply 'http://github.com/lgs/rails-templates/raw/master/Blueprint-CSS-layout'
 
 log 'rm public/index.html'
   inside('public') do

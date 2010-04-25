@@ -1,18 +1,23 @@
-# DEVISE AUTHENTICATION: #
 
 log 'Install devise gem 1.1.pre4'
     inject_into_file "./Gemfile", :after => "# Bundle the extra gems:" do
-      "\ngem 'devise', '1.1.pre4'"
+      "\n gem 'devise', '1.1.rc1' \n\n"
     end
 
 log 'Collect the gems your application requires'
-    run 'bundle install' 
+    run 'bundle install'
 
 log 'Rails generate devise_install'
-    run "script/rails g devise_install"
-    run "script/rails g devise User"
-    run "script/rails g devise_views"
+    run "rails g devise_install"
+    run "rails g devise User"
+    run "rails g devise_views"
     run "rake db:create db:migrate"
-    run "script/rails g controller home index"
-    inject_into_file "config/routes.rb", "\n\n root :to => 'home#index'", :after => "devise_for :users"
+    run "rails g controller home index"
+    inject_into_file "config/routes.rb", "\n\n root :to => 'home#index' \n", :after => "|map|"
+
+log 'create mailer initializer'
+    file 'config/initializers/mailer.rb', <<-ACTIONMAILER
+       ActionMailer::Base.default_url_options[:host] = "localhost:3000"
+    ACTIONMAILER
+
 
