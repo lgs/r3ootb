@@ -1,6 +1,6 @@
 log 'Running r3ootb application template'
-  apply 'http://github.com/lgs/r3ootb/raw/master/rails-3.0.0.beta.3'
-  apply 'http://github.com/lgs/r3ootb/raw/master/devise'
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/rails-3.0.0.beta.3'
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
 
 log 'rm public/index.html'
   inside('public') do
