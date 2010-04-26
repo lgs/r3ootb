@@ -1,6 +1,8 @@
 = Overview
 
 Rails 3 out of the box application templates
+  devise authentication 
+  blueprint css layout via [Boks]
 
 == Usage :
 
