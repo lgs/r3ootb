@@ -6,5 +6,21 @@ Rails 3 out of the box application templates
 
 rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
 
+== Author:
 
+Luca G. Soave : 
+
+{friendfeed.com/lgsff}[http://friendfeed.com/lgsff]
+
+{twitter.com/lgswitter}[http://twitter.com/lgswitter]
+
+{delicious.com/lgsicious}[http://delicious.com/lgsicious]
+
+{my google reader starred items}[http://tinyurl.com/mxjz9p]
+
+{linkedin.com}[http://www.linkedin.com/pub/luca-g-soave/3/196/993]
+
+== License :
+
+Copyright © 2009 Luca G. Soave, released under the {MIT}[http://www.opensource.org/licenses/mit-license.php] license 
 
