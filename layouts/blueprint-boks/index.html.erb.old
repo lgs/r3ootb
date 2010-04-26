@@ -1,1 +1,15 @@
+<div class="container showgrid">
+  <div class="span-24 last" id="header">
+    <div class="span-7" id="Logo"><h1>Fantastic Logo</h1></div>
+    <div class="span-17 last" id="right-header">
+        <% if user_signed_in? %>
+          <%= link_to "settings", edit_user_registration_path %> |
+          <%= link_to "logout", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "login", new_user_session_path %>
+        <% end %>
+    </div>
+  </div>
   <div class="clear span-24 last" id="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et magna sed augue feugiat vehicula ut quis leo. Donec et libero ante. Nam nec ante quis risus facilisis convallis. Donec et justo sed diam interdum placerat ac molestie tellus. Nulla metus eros, malesuada sit amet pharetra vel, venenatis eu lectus. Sed at est est. Aliquam in sem nibh. Donec id eros lorem. Nunc quis viverra diam. Aliquam vitae nulla a tortor sollicitudin adipiscing a ac erat. Cras at vulputate quam. Sed quis sem sapien.</p></div>
+  <div class="clear span-24 last" id="footer">© 2010 r3ootb.com</div>
+</div>
