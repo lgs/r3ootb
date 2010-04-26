@@ -11,14 +11,15 @@ log 'Building layout'
     run('rm index.html')
   end
   if yes?("\nCreate a Boks Blueprint CSS ? (y/n)")
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/fancy-type.css", "public/stylesheets/fancy-type.css"
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets/screen.css"
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/print.css", "public/stylesheets/print.css"
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/ie.css", "public/stylesheets/ie.css"
-    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/grid.png", "public/images/grid.png"
+
     run 'rm app/views/home/index.html.erb'
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/index.html.erb"
   else
-    if yes?("\nCreate a generic Blueprint CSS environment ? (y/n)")
+    if yes?("\nCreate a white Blueprint CSS environment without template ? (y/n)")
       apply 'http://github.com/lgs/r3ootb/raw/master/templates/blueprint-css'
     end
   end
