@@ -1,28 +1,15 @@
 = Overview
 
-Rails 3 out of the box application templates
-  devise authentication 
-  blueprint css layout via [Boks]
+Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta3 }[http://github.com/rails/rails/tree/v3.0.0.beta.3] and is packed up with :
+
+  {devise}[http://github.com/plataformatec/devise] authentication 
+  {blueprint css}[http://github.com/joshuaclayton/blueprint-css] layout, built with {Boks}[http://toki-woki.net/p/Boks/help.html]
 
 == Usage :
 
 rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
 
-== Author:
-
-Luca G. Soave : 
-
-{friendfeed.com/lgsff}[http://friendfeed.com/lgsff]
-
-{twitter.com/lgswitter}[http://twitter.com/lgswitter]
-
-{delicious.com/lgsicious}[http://delicious.com/lgsicious]
-
-{my google reader starred items}[http://tinyurl.com/mxjz9p]
-
-{linkedin.com}[http://www.linkedin.com/pub/luca-g-soave/3/196/993]
-
 == License :
 
-Copyright © 2009 Luca G. Soave, released under the {MIT}[http://www.opensource.org/licenses/mit-license.php] license 
+Copyright © 2010 Luca G. Soave, released under the {MIT}[http://www.opensource.org/licenses/mit-license.php] license 
 

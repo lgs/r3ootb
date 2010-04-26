@@ -21,7 +21,7 @@ log 'Building layout'
     end
 
     inject_into_file "app/views/layouts/application.html.erb", :before => "</body>" do
-      "\n  <div class=\"clear span-24 last\" id=\"footer\">© 2010 r3ootb.com</div>\n</div>\n"
+      "\n  <div class=\"clear span-24 last\" id=\"footer\">Released under the MIT license</div>\n</div>\n"
     end
 
     run 'rm app/views/home/index.html.erb'
@@ -31,4 +31,15 @@ log 'Building layout'
       apply 'http://github.com/lgs/r3ootb/raw/master/templates/blueprint-css'
     end
   end
+
+#log 'rails-footnotes:  yes, you want it only in development'
+#  inject_into_file "config/environments/development.rb", :before => "end" do
+#
+#    'config.gem "rails-footnotes"'
+#    'if defined?(Footnotes)'
+#    "  Footnotes::Filter.prefix = 'txmt://open?url=file://%s&amp;line=%d&amp;column=%d'"
+#    'end'
+#
+#  end
+
 
