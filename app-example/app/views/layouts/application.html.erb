@@ -7,8 +7,24 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div class="container showgrid">
+  <div class="span-24 last" id="header">
+    <div class="span-7" id="Logo"><h1>Fantastic Logo</h1></div>
+    <div class="span-17 last" id="right-header">
+        <% if user_signed_in? %>
+          <%= link_to "settings", edit_user_registration_path %> |
+          <%= link_to "logout", destroy_user_session_path %>
+         <% else %>
+           <%= link_to "login", new_user_session_path %>
+         <% end %>
+     </div>
+  </div>
+
 
 <%= yield %>
 
+
+  <div class="clear span-24 last" id="footer">© 2010 r3ootb.com</div>
+</div>
 </body>
 </html>
