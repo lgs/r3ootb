@@ -8,7 +8,7 @@ Rails 3 out of the box application templates (R3OOTB), actually runs {Rails vers
 
 == Usage :
 
-rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
+  rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
 
 == License :
 
