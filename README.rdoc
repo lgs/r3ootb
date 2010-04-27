@@ -1,9 +1,10 @@
 = Overview
 
-Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta3 }[http://github.com/rails/rails/tree/v3.0.0.beta.3] and is packed up with :
+Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta3 }[http://github.com/rails/rails/tree/v3.0.0.beta.3] and is packed up with fine jewels:
 
-  {devise}[http://github.com/plataformatec/devise] authentication 
-  {blueprint css}[http://github.com/joshuaclayton/blueprint-css] layout, built with {Boks}[http://toki-woki.net/p/Boks/help.html]
+{devise}[http://github.com/plataformatec/devise] authentication 
+
+{blueprint css}[http://github.com/joshuaclayton/blueprint-css] layout, built with {Boks}[http://toki-woki.net/p/Boks/help.html]
 
 == Usage :
 
