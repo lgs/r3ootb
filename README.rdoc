@@ -6,11 +6,11 @@ Rails 3 out of the box application templates (R3OOTB), actually runs {Rails vers
 
 {blueprint css}[http://github.com/joshuaclayton/blueprint-css] layout, built with {Boks}[http://toki-woki.net/p/Boks/help.html]
 
-== Usage :
+== Usage 
 
   rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
 
-== License :
+== License 
 
 (The MIT License)
 
