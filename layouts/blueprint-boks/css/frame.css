@@ -1,0 +1,12 @@
+
+<style>
+  body { margin:20px 0; }
+  .container  { height: 400px;  }
+  #maincol { background: #ccc; }
+  #leftcol { background: #ccf; }
+  #rightcol { background: #fcc; }
+  #sidecol { background: #cfc; }
+  #leftcol, #rightcol  { height: 150px;  }
+  #maincol, #sidecol  { height: 250px;  }
+</style>
+

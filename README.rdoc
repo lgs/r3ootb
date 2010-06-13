@@ -1,6 +1,6 @@
 = Overview
 
-Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta3 }[http://github.com/rails/rails/tree/v3.0.0.beta.3] and is packed up with fine jewels:
+Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta4 }[http://github.com/rails/rails/tree/v3.0.0.beta4] and is packed up with fine jewels:
 
 {devise}[http://github.com/plataformatec/devise] authentication 
 

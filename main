@@ -1,7 +1,7 @@
 
 log 'main template'
   #apply 'http://gist.github.com/378520.txt'
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/base-rails-3.0.0.beta3'
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/base-rails-3.0.0.beta4'
 
   #apply 'http://gist.github.com/378517.txt'
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
