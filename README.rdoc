@@ -1,3 +1,11 @@
+= Warning 
+
+Rails version 3.0.0.beta4 is VERY experimental, use it at your own risk. Some bugs can be found using rvm 1.9.2-head. 
+
+More stable environment should be ruby 1.8.7 (2010-01-10 patchlevel 249) [i486-linux]
+
+Feel free to fork the project, add your own patches  and send a pull request.
+
 = Overview
 
 Rails 3 out of the box application templates (R3OOTB), actually runs {Rails version 3.0.0.beta4 }[http://github.com/rails/rails/tree/v3.0.0.beta4] and is packed up with fine jewels:
@@ -8,7 +16,9 @@ Rails 3 out of the box application templates (R3OOTB), actually runs {Rails vers
 
 == Usage 
 
-  rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
+Warning: don't forget to add "new" to rails command ...
+
+  rails new <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
 
 == License 
 
