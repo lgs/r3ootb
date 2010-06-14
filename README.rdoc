@@ -16,14 +16,9 @@ Rails 3 out of the box application templates (R3OOTB), actually runs {Rails vers
 
 == Usage 
 
-Warning: don't forget to add "new" to rails command ..., when running ruby 1.9.2dev (2010-06-13 revision 28310)
+Warning: don't forget to add "new" to rails command :
 
   rails new <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
-
-use rails command without "new" instead, when running ruby 1.8.7 (2010-01-10 patchlevel 249)
-
-  rails <app-name> -m http://github.com/lgs/r3ootb/raw/master/main
-
 
 == License 
 
