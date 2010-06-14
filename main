@@ -10,6 +10,10 @@ log 'Building layout'
   inside('public') do
     run('rm index.html')
   end
+  print "Now you have 3 choices, type 'n' to skip to the next: \n
+  - having Blueprint CSS with a simple Boks template \n
+  - having Blueprint CSS without template \n
+  - having no Blueprint CSS nor template at all \n"
   if yes?("\nCreate a Boks Blueprint CSS ? (y/n)")
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/fancy-type.css", "public/stylesheets/fancy-type.css"
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets/screen.css"
