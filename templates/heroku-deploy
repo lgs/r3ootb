@@ -1,6 +1,3 @@
-puts 'sudo gem install heroku'
-run 'sudo gem install heroku'
-
 puts 'git init'
 run 'git init'
 
@@ -10,16 +7,7 @@ run 'git add .'
 puts 'git commit -m "first commit"'
 run 'git commit -m "first commit"'
 
-puts "heroku create #{project_name}"
-run "heroku create #{project_name}"
-
 puts 'git push heroku master'
-run 'git push heroku master'
-
-puts 'heroku stack:migrate bamboo-ree-1.8.7'
-run 'heroku stack:migrate bamboo-ree-1.8.7'
-
-puts 'push again after migration on bamboo-ree-1.8.7'
 run 'git push heroku master'
 
 puts 'heroku rake db:migrate'

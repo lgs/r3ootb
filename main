@@ -39,6 +39,7 @@ log 'Building layout'
   end
 
 if yes?("\nDeploy on Heroku ? (y/n)")
+  run "heroku create --stack bamboo-ree-1.8.7 --remote #{project_name}"
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/heroku-deploy'
 end
 
