@@ -37,7 +37,7 @@ log 'Building layout'
   end
 
 if yes?("\nDeploy on Heroku ? (y/n)")
-  apply 'http://github.com/lgs/r3ootb/raw/master/heroku-deploy'
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/heroku-deploy'
 end
 
 #log 'rails-footnotes:  yes, you want it only in development'
