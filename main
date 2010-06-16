@@ -1,3 +1,5 @@
+project_name = ARGV[0]
+puts "Il nome del progetto e' #{project_name}"
 
 log 'main template'
   #apply 'http://gist.github.com/378520.txt'
