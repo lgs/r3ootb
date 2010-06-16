@@ -42,8 +42,8 @@ if yes?("\nDeploy on Heroku ? (y/n)")
 
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/git-init'
 
-  puts 'heroku create --stack bamboo-ree-1.8.7'
-  run 'heroku create --stack bamboo-ree-1.8.7'
+  puts "heroku create --stack bamboo-ree-1.8.7 --remote #{project_name}"
+  run "heroku create --stack bamboo-ree-1.8.7 --remote #{project_name}"
 
   puts 'git push heroku master'
   run 'git push heroku master'
