@@ -7,9 +7,3 @@ run 'git add .'
 puts 'git commit -m "first commit"'
 run 'git commit -m "first commit"'
 
-puts 'git push heroku master'
-run 'git push heroku master'
-
-puts 'heroku rake db:migrate'
-run 'heroku rake db:migrate'
-

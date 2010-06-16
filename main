@@ -39,8 +39,17 @@ log 'Building layout'
   end
 
 if yes?("\nDeploy on Heroku ? (y/n)")
-  run "heroku create --stack bamboo-ree-1.8.7 --remote #{project_name}"
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/heroku-deploy'
+
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/git-init'
+
+  puts 'heroku create --stack bamboo-ree-1.8.7'
+  run 'heroku create --stack bamboo-ree-1.8.7'
+
+  puts 'git push heroku master'
+  run 'git push heroku master'
+
+  puts 'heroku rake db:migrate'
+  run 'heroku rake db:migrate'
 end
 
 #log 'rails-footnotes:  yes, you want it only in development'
