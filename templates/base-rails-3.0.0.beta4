@@ -1,17 +1,16 @@
-
 log 'Set Gemfile to Rails 3.0.0.beta4'
   run 'rm Gemfile'
   file 'Gemfile', <<-GEMFILE
       source 'http://rubygems.org'
 
       # Bundle edge Rails & Rack:
-      gem 'rails', '3.0.0.beta4', :git => 'git://github.com/rails/rails.git'
-      gem 'rack', '1.1.0', :git => 'git://github.com/rails/rack.git'
+      gem 'rails', '3.0.0.rc', :git => 'git://github.com/rails/rails.git'
+      gem 'rack', '1.2.1', :git => 'git://github.com/rails/rack.git'
 
-      gem 'rack-mount'
+      gem 'rack-mount'#, '0.6.9', :git => 'git://github.com/josh/rack-mount.git'
       gem 'rack-test'
       gem 'sqlite3-ruby', :require => 'sqlite3'
-      gem 'bundler', '0.9.26' 
+      gem 'bundler', '1.0.0.rc.1' 
 
       # Bundle the extra gems:
       #gem 'rails-footnotes'
