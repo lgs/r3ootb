@@ -1,4 +1,4 @@
-log 'Set Gemfile to Rails 3.0.0.beta4'
+log 'Set Gemfile to Rails 3.0: Release candidate!'
   run 'rm Gemfile'
   file 'Gemfile', <<-GEMFILE
       source 'http://rubygems.org'
