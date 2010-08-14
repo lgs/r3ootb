@@ -10,9 +10,9 @@ log 'Collect the gems your application requires, this can take a wile ...'
     run 'bundle install'
 
 log 'Rails generate devise_install'
-    run "rails g devise_install"
+    run "rails g devise:install"
     run "rails g devise User"
-    run "rails g devise_views"
+    run "rails g devise:views"
     run "rake db:create db:migrate"
     run "rails g controller home index"
     inject_into_file "config/routes.rb", "\n\n root :to => 'home#index' \n", :after => "|map|"
