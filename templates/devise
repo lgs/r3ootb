@@ -1,9 +1,9 @@
-log 'Install devise gem 1.1.rc2'
+log 'Install devise gem 1.1.1'
     inject_into_file "./Gemfile", :after => "# Bundle the extra gems:" do
       "\n      gem 'devise', '>= 1.1.1' \n\n"
     end
 
-log 'Collect the gems your application requires'
+log 'Collect the gems your application requires, this can take a wile ...'
     #run "check = bundle check"
     #if check == "
     run 'bundle install'
