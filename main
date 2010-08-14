@@ -1,8 +1,6 @@
 project_name = ARGV[0]
 puts "Il nome del progetto e' #{project_name}"
 
-  run 'gem install rails --pre'
-
 log 'main template'
   #apply 'http://gist.github.com/378520.txt'
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/base-rails-3.0.0.rc'
