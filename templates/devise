@@ -6,6 +6,7 @@ log 'Install devise gem 1.1.1'
 log 'Collect the gems your application requires, this can take a wile ...'
     #run "check = bundle check"
     #if check == "
+    run "gem install bundler --pre"
     run 'bundle install'
 
 log 'Rails generate devise_install'
