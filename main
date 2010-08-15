@@ -1,8 +1,8 @@
 project_name = ARGV[0]
 puts "The name of project is #{project_name}"
 
-log 'main template'
-  apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
+# apply '/home/lsoave/templates/r3ootb/templates/devise'
+apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
 
 log 'Building layout'
   inside('public') do

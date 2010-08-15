@@ -1,23 +1,29 @@
-log 'Install devise gem 1.1.1'
-    inject_into_file "./Gemfile", :after => "# Bundle the extra gems:" do
-      #"\n      gem 'devise', '1.1.1' \n\n"
-      "gem 'devise', '1.1.1' \n"
-    end
+log 'setup Gemfile for Devise 1.1.1 to supports Rails 3 RC'
+    append_file 'Gemfile', "\n# Bundle gem needed for Devise\n"
+    gem 'devise', '1.1.1 \n' 
 
-log 'Collect the gems your application requires, this can take a wile ...'
+log 'installing Devise gem, please wait (this can take a while)...'
     run "sudo gem install bundler --pre"
     run 'bundle install'
 
-log 'Rails generate devise_install'
+log 'generate devise install'
     run "rails g devise:install"
-    run "rails g devise User"
-    run "rails g devise:views"
-    run "rake db:create db:migrate"
-    run "rails g controller home index"
-    inject_into_file "config/routes.rb", "\n\n root :to => 'home#index' \n", :after => "devise_for :users" 
-    gsub_file 'config/routes.rb', /# get "home/index"/, '\n'
 
-log 'create mailer initializer'
+log 'generate User model'
+    run "rails g devise User"
+
+log 'generate devise views'
+    run "rails g devise:views"
+
+log 'run the DB migration'
+    run "rake db:create db:migrate"
+
+log 'create a home controller and viewr'
+    run "rails g controller home index"
+    gsub_file 'config/routes.rb', /get \"home\/index\"/, 'root :to => "home#index"'
+
+log 'create mailer initializer: config/initializers/mailer.rb'
+log 'this is localhost:3000 until now ...' 
     file 'config/initializers/mailer.rb', <<-ACTIONMAILER
        ActionMailer::Base.default_url_options[:host] = "localhost:3000"
     ACTIONMAILER
