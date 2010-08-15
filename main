@@ -1,11 +1,7 @@
 project_name = ARGV[0]
-puts "Il nome del progetto e' #{project_name}"
+puts "The name of project is #{project_name}"
 
 log 'main template'
-
-  # old 
-  # apply 'http://github.com/lgs/r3ootb/raw/master/templates/base-rails-3.0.0.rc'
-
   apply 'http://github.com/lgs/r3ootb/raw/master/templates/devise'
 
 log 'Building layout'

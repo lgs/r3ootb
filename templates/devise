@@ -1,11 +1,10 @@
 log 'Install devise gem 1.1.1'
     inject_into_file "./Gemfile", :after => "# Bundle the extra gems:" do
-      "\n      gem 'devise', '1.1.1' \n\n"
+      #"\n      gem 'devise', '1.1.1' \n\n"
+      "gem 'devise', '1.1.1' \n"
     end
 
 log 'Collect the gems your application requires, this can take a wile ...'
-    #run "check = bundle check"
-    #if check == "
     run "sudo gem install bundler --pre"
     run 'bundle install'
 
@@ -15,7 +14,8 @@ log 'Rails generate devise_install'
     run "rails g devise:views"
     run "rake db:create db:migrate"
     run "rails g controller home index"
-    inject_into_file "config/routes.rb", "\n\n root :to => 'home#index' \n", :after => "|map|"
+    inject_into_file "config/routes.rb", "\n\n root :to => 'home#index' \n", :after => "devise_for :users" 
+    gsub_file 'config/routes.rb', /# get "home/index"/, '\n'
 
 log 'create mailer initializer'
     file 'config/initializers/mailer.rb', <<-ACTIONMAILER
