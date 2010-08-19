@@ -1,0 +1,26 @@
+
+  apply 'http://github.com/lgs/r3ootb/raw/master/templates/git-init'
+
+  if yes?("\nDo you like #{project_name}.heroku.com ? (y/n)")
+    puts "heroku create #{project_name}"
+    run "heroku create  #{project_name}"
+  else
+    puts "heroku create"
+    run "heroku create"
+  end
+
+  puts 'git push heroku master'
+  run 'git push heroku master'
+
+  inject_into_file "Gemfile", :after => "gem 'bundler', '0.9.26'" do
+      "\n      gem 'pg'\n      gem 'thin'\n"
+  end
+
+  puts 'git push heroku master'
+  run 'git push heroku master'
+
+  puts 'heroku rake db:migrate'
+  run 'heroku rake db:migrate'
+
+
+

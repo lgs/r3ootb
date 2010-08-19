@@ -1,0 +1,12 @@
+
+#log 'rails-footnotes:  yes, you want it only in development'
+#  inject_into_file "config/environments/development.rb", :before => "end" do
+#
+#    'config.gem "rails-footnotes"'
+#    'if defined?(Footnotes)'
+#    "  Footnotes::Filter.prefix = 'txmt://open?url=file://%s&amp;line=%d&amp;column=%d'"
+#    'end'
+#
+#  end
+
+

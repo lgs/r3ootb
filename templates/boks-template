@@ -1,0 +1,15 @@
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/fancy-type.css", "public/stylesheets/fancy-type.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/screen.css", "public/stylesheets/screen.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/print.css", "public/stylesheets/print.css"
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/css/ie.css", "public/stylesheets/ie.css"
+
+    inject_into_file "app/views/layouts/application.html.erb", :after => "<body>" do
+      "\n<div class=\"container showgrid\">\n  <div class=\"span-24 last\" id=\"header\">\n    <div class=\"span-7\" id=\"Logo\"><h1>Fantastic Logo</h1></div>\n    <div class=\"span-17 last\" id=\"right-header\">\n        <% if user_signed_in? %>\n          <%= link_to \"settings\", edit_user_registration_path %> |\n          <%= link_to \"logout\", destroy_user_session_path %>\n         <% else %>\n           <%= link_to \"login\", new_user_session_path %>\n         <% end %>\n     </div>\n  </div>\n"
+    end
+
+    inject_into_file "app/views/layouts/application.html.erb", :before => "</body>" do
+      "\n  <div class=\"clear span-24 last\" id=\"footer\">Released under the MIT license</div>\n</div>\n"
+    end
+
+    get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/index.html.erb"
+
