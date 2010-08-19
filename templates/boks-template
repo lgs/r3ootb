@@ -11,5 +11,5 @@
       "\n  <div class=\"clear span-24 last\" id=\"footer\">Released under the MIT license</div>\n</div>\n"
     end
 
+    run 'rm app/views/home/index.html.erb'
     get "http://github.com/lgs/r3ootb/raw/master/layouts/blueprint-boks/index.html.erb", "app/views/home/index.html.erb"
-
